@@ -1,0 +1,104 @@
+/* MyComponent.css */
+
+/* Style for the container that holds the form */
+.form-container {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-container-subgroup {
+  margin: 2%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; /* Center items vertically */
+  text-align: center; /* Center the text within the container */
+}
+
+/* Style for the form title */
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style for form input fields */
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.form-container .form-group label {
+  font-size: 25px; /* Adjust the font size as needed */
+  padding: 10px;
+}
+
+.form-group {
+  padding: 10px;
+}
+/* Style for submit button */
+button[type="submit"] {
+  width: 90%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.result-container {
+  flex: 1;
+  align-items: center;
+}
+
+/* Style for submit button on hover */
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    #87ceeb,
+    #90ee90
+  ); /* Full-page gradient background */
+  min-height: 100vh;
+}
+
+.result-container.text-container p {
+  color: #007bff; /* Adjust the color as needed */
+}
+
+.result-container.text-container p.error {
+  color: #ff0000; /* Red color for error messages */
+}

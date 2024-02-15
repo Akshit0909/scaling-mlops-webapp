@@ -1,5 +1,61 @@
 .App {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: row;
+  /* justify-content: space-between; /* Space between the left and right halves */
+  /* align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.left-half {
+  width: 100%;
+  padding: 10px;
   text-align: center;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.right-half {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 100px;
+}
+
+.right-half p {
+  font-size: 22px; /* Set the desired font size */
+  font-weight: bold; /* Add any other desired styling */
+  color: #333; /* Set the desired text color */
+  margin-bottom: 20px; /* Add margin to the bottom for spacing */
+}
+
+.right-half h1 {
+  font-size: 31px; /* Set the desired font size */
+  font-weight: bold; /* Add any other desired styling */
+}
+
+.info-container {
+  text-align: justify; /* Center-align text within info-container */
+  max-width: 600px;
+}
+
+.project-info {
+  background: #007bff; /* Background color for the left half */
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+  font-size: 34 px;
+  font-weight: bold;
+}
+
+.project-description {
+  font-size: 18px;
 }
 
 .App-logo {
@@ -34,5 +90,34 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  /*background-color: #333;*/
+  color: #000;
+  font-size: 18px; /* Increase the font size */
+  position: absolute;
+  bottom: 0; /* Position the footer at the bottom of the page */
+  width: 100%; /* Make the footer full width */
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Disable scrolling */
+}
+
+.form-container {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }

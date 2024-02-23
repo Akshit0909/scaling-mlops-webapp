@@ -2,6 +2,9 @@
 
 Welcome to the Customer Churn Prediction Frontend repository! This repository contains the frontend code for interacting with the customer churn prediction system. This README provides an overview of the project structure, components, flow, and key learnings.
 
+![Front End](docs/images/frontend.PNG)
+
+
 ## Overview
 
 This project aims to provide users with an intuitive web interface for submitting customer information and receiving churn prediction results from the deployed machine learning model. The frontend is built using React.js, ensuring a responsive and interactive user experience.
@@ -29,14 +32,20 @@ Refer to the provided detailed flow documentation for a comprehensive understand
 
 ## Additional Notes and Learnings
 
-### CORS (Cross-Origin Resource Sharing)
-To ensure proper communication between the frontend and backend deployed on AWS Elastic Beanstalk, CORS must be configured appropriately. This prevents CORS-related errors and allows seamless data exchange between the client and server.
+### Understanding CSS Class Naming
+In CSS, when you have multiple class names in a single HTML element, such as <div className="result-container text-container">, the classes are combined without spaces when referenced in CSS selectors. For example, .result-container.text-container targets elements that have both classes applied to them. This is crucial to remember when styling components in React, as it affects how you write your CSS selectors to target specific elements accurately.
+
+### Component Interaction and Separation of Concerns
+Your application follows a clear separation of concerns, with each component responsible for specific functionality. For instance, MyComponent handles form input, submission logic, and result display, while ProjectInfo is dedicated to displaying project information. This modular approach makes your codebase easier to understand, maintain, and scale, as each component focuses on a single responsibility. It also promotes reusability, as components can be easily reused in different parts of your application or in other projects.
+
+### Handling CORS Issues
+When integrating your React frontend with a backend hosted on AWS Elastic Beanstalk, you encountered CORS-related errors due to security restrictions. CORS (Cross-Origin Resource Sharing) is a security mechanism implemented by web browsers to restrict cross-origin HTTP requests. To resolve CORS errors, you need to configure your backend server to accept requests from your frontend domain. This typically involves setting appropriate CORS headers on the server-side to allow cross-origin requests. By addressing CORS issues, you ensure seamless communication between your frontend and backend components, enabling the proper functioning of your application.
 
 ### Asynchronous Programming with Async/Await
-Utilize asynchronous programming techniques, such as async/await, to handle HTTP requests efficiently. This ensures that the user interface remains responsive while waiting for server responses. Asynchronous code execution enables concurrent tasks, improving overall application performance.
+Asynchronous programming, utilizing features like async/await in JavaScript, is essential for handling tasks that involve waiting for responses from external services, such as making HTTP requests. In your code, async/await is used to ensure that the UI remains responsive while waiting for server responses. By marking asynchronous functions with the async keyword and using await to pause execution until promises are resolved, you prevent blocking the main thread and maintain a smooth user experience. Asynchronous programming enables concurrent execution of tasks, improving overall application performance and responsiveness.
 
-### Debugging and Error Handling
-When encountering errors, utilize debugging techniques to identify and resolve issues effectively. Proper error handling, including try-catch blocks, ensures graceful handling of errors and prevents application crashes. Debugging tools and logging mechanisms aid in diagnosing and troubleshooting issues during development and deployment.
+### Debugging and Troubleshooting
+Encountering errors, such as CORS issues during development, is common in web development projects. Effective debugging techniques, such as logging and using browser developer tools, are essential for identifying and resolving issues promptly. When facing errors like CORS-related issues, inspecting network requests and server responses can provide valuable insights into the root cause of the problem. Additionally, thorough error handling in your code, including try-catch blocks, ensures graceful handling of errors and prevents application crashes, contributing to a more robust and reliable application.
 
 ## Next Steps
 
